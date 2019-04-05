@@ -1,0 +1,50 @@
+{
+  "name": "indorse-backend",
+  "version": "1.0.0",
+  "description": "Serverless app to deploy multiple labmda functions for APIs",
+  "main": "handler.js",
+  "scripts": {
+    "offline": "./node_modules/serverless/bin/serverless offline start --skipCacheInvalidation",
+    "deploy": "./node_modules/serverless/bin/serverless deploy",
+    "lint": "./node_modules/eslint/bin/eslint.js .",
+    "lint-fix": "./node_modules/eslint/bin/eslint.js . --fix",
+    "test": "mocha --timeout 5000",
+    "generate-docs": "./node_modules/apidoc/bin/apidoc -i ./src -o docs/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vijaykrishnavanshi/indorse-backend.git"
+  },
+  "keywords": [
+    "serverless",
+    "lambda",
+    "aws"
+  ],
+  "author": "Vijay Krishnavanshi",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/vijaykrishnavanshi/indorse-backend/issues"
+  },
+  "homepage": "https://github.com/vijaykrishnavanshi/indorse-backend#readme",
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "devDependencies": {
+    "apidoc": "^0.17.6",
+    "eslint": "^5.7.0",
+    "eslint-config-prettier": "^3.1.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-security": "^1.4.0",
+    "mocha": "^5.2.0",
+    "prettier": "^1.14.3",
+    "serverless-offline": "^3.27.0"
+  },
+  "dependencies": {
+    "dotenv": "^6.1.0",
+    "dynogels": "^9.0.0",
+    "mongoose": "^5.3.3",
+    "mongoose-auto-increment": "^5.0.1",
+    "serverless": "^1.32.0"
+  }
+}
